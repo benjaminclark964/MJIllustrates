@@ -1,0 +1,66 @@
+body{
+  background-color: rgb(242,187,145);
+}
+
+p{
+  word-wrap: break-word;
+  width: 750px; /* that depends on text */
+  text-align: center;
+  margin: 0 auto;
+}
+
+.logo{
+  width: 700px;
+  height: 700px;
+  margin-left: 27%;
+  /*margin-bottom: 0%;*/
+}
+
+.foot{
+  list-style: none;
+  position: below;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgb(211,211,211);
+  text-align: center;
+}
+
+.foot li{
+	margin: 0 20;
+}
+
+.navbar { 
+  margin-left: 1250px;
+  list-style: none;
+}
+
+.navbar li {
+  /*list-style: none;*/
+  background: #ccc;
+  float: left;
+  margin: 0 20;
+}
+
+.signinnavbar{
+  margin-left: 1200px;
+  list-style: none;
+}
+
+.signinnavbar li {
+  /*list-style: none;*/
+  background: #ccc;
+  float: left;
+  margin: 0 20;
+}
+
+.signinbutton{
+  margin-left: 1400px;
+  list-style: none;
+}
+
+.signinbutton li{
+  /*list-style: none;*/
+  background: #ccc;
+  float: left;
+}
