@@ -11,8 +11,8 @@ p{
 }
 
 .logo{
-  width: 700px;
-  height: 700px;
+  width: 550px;
+  height: 550px;
   margin-left: 27%;
   /*margin-bottom: 0%;*/
 }
@@ -32,7 +32,7 @@ p{
 }
 
 .navbar { 
-  margin-left: 1250px;
+  margin-left: 1050px;
   list-style: none;
 }
 
@@ -40,7 +40,7 @@ p{
   /*list-style: none;*/
   background: #ccc;
   float: left;
-  margin: 0 20;
+  margin: 0 10;
 }
 
 .signinnavbar{
@@ -56,7 +56,7 @@ p{
 }
 
 .signinbutton{
-  margin-left: 1400px;
+  margin-left: 1175px;
   list-style: none;
 }
 
