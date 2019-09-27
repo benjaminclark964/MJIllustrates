@@ -3,13 +3,6 @@ body{
   font-family:"Neo Sans fonts", Verdana, sans-serif
 }
 
-p{
-  word-wrap: break-word;
-  width: 750px; /* that depends on text */
-  text-align: center;
-  margin: 0 auto;
-}
-
 .logo{
   width: 550px;
   height: 550px;
@@ -44,7 +37,7 @@ p{
 }
 
 .signinnavbar{
-  margin-left: 1200px;
+  margin-left: 1000px;
   list-style: none;
 }
 
@@ -52,7 +45,7 @@ p{
   /*list-style: none;*/
   background: #ccc;
   float: left;
-  margin: 0 20;
+  margin: 0 10;
 }
 
 .signinbutton{
@@ -64,4 +57,20 @@ p{
   /*list-style: none;*/
   background: #ccc;
   float: left;
+}
+
+.firstlastname{
+	list-style: none;
+	margin-left: 550px;
+	margin-top: 20px;
+	margin-bottom: 50px;
+}
+
+.paragraphs{
+  word-wrap: break-word;
+  width: 750px; /* that depends on text */
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 50px;
+	
 }
