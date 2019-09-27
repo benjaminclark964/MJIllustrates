@@ -4,10 +4,9 @@ body{
 }
 
 .logo{
-  width: 550px;
-  height: 550px;
+  width: 700px;
+  height: 700px;
   margin-left: 27%;
-  /*margin-bottom: 0%;*/
 }
 
 .foot{
@@ -25,50 +24,47 @@ body{
 }
 
 .navbar { 
-  margin-left: 1050px;
+  margin-left: 1300px;
   list-style: none;
 }
 
 .navbar li {
-  /*list-style: none;*/
   background: #ccc;
   float: left;
   margin: 0 10;
 }
 
 .signinnavbar{
-  margin-left: 1000px;
+  margin-left: 1250px;
   list-style: none;
 }
 
 .signinnavbar li {
-  /*list-style: none;*/
   background: #ccc;
   float: left;
   margin: 0 10;
 }
 
 .signinbutton{
-  margin-left: 1175px;
+  margin-left: 1425px;
   list-style: none;
 }
 
 .signinbutton li{
-  /*list-style: none;*/
   background: #ccc;
   float: left;
 }
 
 .firstlastname{
 	list-style: none;
-	margin-left: 550px;
+	margin-left: 675px;
 	margin-top: 20px;
 	margin-bottom: 50px;
 }
 
 .paragraphs{
   word-wrap: break-word;
-  width: 750px; /* that depends on text */
+  width: 750px; 
   text-align: center;
   margin: 0 auto;
   margin-bottom: 50px;
