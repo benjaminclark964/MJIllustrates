@@ -23,13 +23,13 @@ body{
 	margin: 0 20;
 }
 
-.navbar { 
-  margin-left: 1300px;
+.navbar{ 
+  margin-left: 665px;
+  margin-bottom: 75px;
   list-style: none;
 }
 
-.navbar li {
-  background: #ccc;
+.navbar li{
   float: left;
   margin: 0 10;
 }
