@@ -1,14 +1,17 @@
+/* Body styling for every page*/
 body{
   background-color: rgb(242,187,145);
   font-family:"Neo Sans fonts", Verdana, sans-serif
 }
 
+/* Logo styling for every page*/
 .logo{
-  width: 700px;
-  height: 700px;
-  margin-left: 27%;
+  width: 800px;
+  height: 800px;
+  margin-left: 23%;
 }
 
+/* Footer styling for every page */
 .foot{
   list-style: none;
   position: below;
@@ -23,45 +26,126 @@ body{
 	margin: 0 20;
 }
 
-.navbar{ 
-  margin-left: 665px;
+/* Navigation bar styling for Index page and Art Page*/
+.navbarHome{ 
+  margin-left: 645px;
   margin-bottom: 75px;
   list-style: none;
 }
 
-.navbar li{
+.navbarHome li{
   float: left;
   margin: 0 10;
 }
 
+.navbarHome a{
+  text-decoration: none;
+  color: white;
+}
+
+.navbarHome a:hover{
+  color: blue;
+}
+
+/* Navigation bar styling for About page */
+.navbarAbout{
+  margin-left: 653px;
+  margin-bottom: 75px;
+  list-style: none;	
+}
+
+.navbarAbout a{
+  text-decoration: none;
+  color: white;
+}
+
+.navbarAbout a:hover{
+  color: blue;
+}
+
+.navbarAbout li{
+  float: left;
+  margin: 0 10;
+}
+
+/* Navigation bar styling for Art page */
+.navbarArt{
+  margin-left: 638px;
+  margin-bottom: 75px;
+  list-style: none;	
+}
+
+.navbarArt li{
+  float: left;
+  margin: 0 10;
+}
+
+.navbarArt a{
+  text-decoration: none;
+  color: white;
+}
+
+.navbarArt a:hover{
+  color: blue;
+}
+
+/* Navigation bar styling for sign in page*/
 .signinnavbar{
-  margin-left: 1250px;
+  margin-left: 620px;
+  margin-bottom: 100px;
   list-style: none;
 }
 
 .signinnavbar li {
-  background: #ccc;
   float: left;
   margin: 0 10;
 }
 
+.signinnavbar a{
+  color: white;
+  text-decoration: none;
+}
+
+.signinnavbar a:hover{
+  color: blue;
+}
+
+/* Styling for sign in link for all pages */
 .signinbutton{
   margin-left: 1425px;
   list-style: none;
 }
 
 .signinbutton li{
-  background: #ccc;
   float: left;
 }
 
+.signinbutton a{
+  color:white;
+  text-decoration: none;
+}
+
+.signinbutton a:hover{
+  color: blue;
+}
+
+/* styling for input text boxes on sign in page*/
 .firstlastname{
 	list-style: none;
 	margin-left: 675px;
-	margin-top: 20px;
 	margin-bottom: 50px;
 }
 
+.firstlastname a{
+  text-decoration: none;
+  color: white;
+}
+
+.firstlastname a:hover{
+  color: blue;
+}
+
+/*Styling for paragrpahs of text across all pages*/
 .paragraphs{
   word-wrap: break-word;
   width: 750px; 
@@ -69,4 +153,19 @@ body{
   margin: 0 auto;
   margin-bottom: 50px;
 	
+}
+
+/* White box around paragrpahs on all pages*/
+.box1{
+  
+  background-color: white;
+} 
+
+.box1 p{
+	padding: 25px;
+}
+
+/*white edge to all pages*/
+html{
+  background: white;
 }
