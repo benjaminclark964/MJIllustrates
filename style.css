@@ -1,31 +1,36 @@
+head{
+	margin: 0;
+	padding: 0;
+}
+
 /* Body styling for every page*/
 body{
+  margin: 0;
+  padding: 0;
   background-color: rgb(242,187,145);
   font-family:"Neo Sans fonts", Verdana, sans-serif
 }
 
 /* Logo styling for every page*/
 .logo{
-  width: 800px;
-  height: 800px;
-  margin-left: 23%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 }
 
 
 /* Navigation bar styling for Index page and Art Page*/
 .navbarHome{ 
-  margin-left: 645px;
+  margin:0 auto;
+  text-align: center;
   margin-bottom: 75px;
   list-style: none;
 }
 
-.navbarHome li{
-  float: left;
-  margin: 0 10;
-}
-
 .navbarHome a{
   text-decoration: none;
+  padding: 10px;
   color: white;
 }
 
@@ -35,7 +40,8 @@ body{
 
 /* Navigation bar styling for About page */
 .navbarAbout{
-  margin-left: 653px;
+  margin:0 auto;
+  text-align: center;
   margin-bottom: 75px;
   list-style: none;	
 }
@@ -49,28 +55,21 @@ body{
   color: blue;
 }
 
-.navbarAbout li{
-  float: left;
-  margin: 0 10;
-}
-
 .aboutpic img {
-  width: 400px;
-  margin-left: 555px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 75px;
+  width: 50%;
  
 }
 
 /* Navigation bar styling for Art page */
 .navbarArt{
-  margin-left: 638px;
+  margin:0 auto;
+  text-align: center;
   margin-bottom: 75px;
   list-style: none;	
-}
-
-.navbarArt li{
-  float: left;
-  margin: 0 10;
 }
 
 .navbarArt a{
@@ -84,31 +83,27 @@ body{
 
 .artImage{
   list-style: none;
-  margin-left: 590px;
-  margin-bottom: 75px;
+  
 }
 
 .artImage li{
-  
   margin: 10;
-  
 }
 
 .artImage img{
-	width:300;
-	
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 75px;
+  width: 50%;	
 }
 
 /* Navigation bar styling for sign in page*/
 .signinnavbar{
-  margin-left: 620px;
-  margin-bottom: 100px;
-  list-style: none;
-}
-
-.signinnavbar li {
-  float: left;
-  margin: 0 10;
+  margin:0 auto;
+  text-align: center;
+  margin-bottom: 75px;
+  list-style: none;	
 }
 
 .signinnavbar a{
@@ -122,12 +117,9 @@ body{
 
 /* Styling for sign in link for all pages */
 .signinbutton{
-  margin-left: 1425px;
+  text-align: right;
+  padding: 25px;
   list-style: none;
-}
-
-.signinbutton li{
-  float: left;
 }
 
 .signinbutton a{
@@ -141,9 +133,10 @@ body{
 
 /* styling for input text boxes on sign in page*/
 .firstlastname{
-	list-style: none;
-	margin-left: 675px;
-	margin-bottom: 50px;
+  margin:0 auto;
+  text-align: center;
+  margin-bottom: 75px;
+  list-style: none;
 }
 
 .firstlastname a{
