@@ -11,20 +11,6 @@ body{
   margin-left: 23%;
 }
 
-/* Footer styling for every page */
-.foot{
-  list-style: none;
-  position: below;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: rgb(211,211,211);
-  text-align: center;
-}
-
-.foot li{
-	margin: 0 20;
-}
 
 /* Navigation bar styling for Index page and Art Page*/
 .navbarHome{ 
@@ -68,6 +54,13 @@ body{
   margin: 0 10;
 }
 
+.aboutpic img {
+  width: 400px;
+  margin-left: 555px;
+  margin-bottom: 75px;
+ 
+}
+
 /* Navigation bar styling for Art page */
 .navbarArt{
   margin-left: 638px;
@@ -87,6 +80,23 @@ body{
 
 .navbarArt a:hover{
   color: blue;
+}
+
+.artImage{
+  list-style: none;
+  margin-left: 590px;
+  margin-bottom: 75px;
+}
+
+.artImage li{
+  
+  margin: 10;
+  
+}
+
+.artImage img{
+	width:300;
+	
 }
 
 /* Navigation bar styling for sign in page*/
@@ -155,6 +165,12 @@ body{
 	
 }
 
+.paragraphs img{
+  width: 700px;
+  height: 500px;
+	
+}
+
 /* White box around paragrpahs on all pages*/
 .box1{
   
@@ -165,7 +181,22 @@ body{
 	padding: 25px;
 }
 
-/*white edge to all pages*/
-html{
-  background: white;
+/* Footer styling for every page */
+.foot{
+  list-style: none;
+  position: below;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgb(211,211,211);
+  text-align: center;
 }
+
+.foot li{
+	margin: 0 20;
+}
+
+/*white edge to all pages*/
+/*html{
+  background: white;
+}*/
