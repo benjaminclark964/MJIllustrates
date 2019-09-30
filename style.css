@@ -161,7 +161,7 @@ body{
   width: 750px; 
   text-align: center;
   margin: 0 auto;
-  margin-bottom: 50px;
+  margin-bottom: 75px;
 	
 }
 
@@ -173,7 +173,6 @@ body{
 
 /* White box around paragrpahs on all pages*/
 .box1{
-  
   background-color: white;
 } 
 
@@ -195,8 +194,3 @@ body{
 .foot li{
 	margin: 0 20;
 }
-
-/*white edge to all pages*/
-/*html{
-  background: white;
-}*/
