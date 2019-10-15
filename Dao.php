@@ -4,6 +4,7 @@ class Dao {
   private $dbname = 'heroku_c0ae98134ba57d2';
   private $username = 'becd588ff4db0c';
   private $password = '1acdca85';
+  
   public function getConnection() {
     try {
        $connection = new PDO("mysql:host={$this->host};dbname={$this->dbname}", $this->username, $this->password);
@@ -13,3 +14,4 @@ class Dao {
     return $connection;
   }
 }
+?>

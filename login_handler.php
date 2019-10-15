@@ -17,3 +17,4 @@ if ($valid) {
    header("Location: http://cs401/login.php");
    exit;
 }
+?>

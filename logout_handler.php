@@ -3,3 +3,4 @@
   session_destroy();
   header("Location: http://cs401/login.php");
   exit;
+ ?>
