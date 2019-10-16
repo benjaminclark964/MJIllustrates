@@ -154,7 +154,7 @@ body{
 /*Styling for paragrpahs of text across all pages*/
 .paragraphs{
   word-wrap: break-word;
-  width: 750px; 
+  width: 90%; 
   text-align: center;
   margin: 0 auto;
   margin-bottom: 75px;
