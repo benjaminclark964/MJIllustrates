@@ -4,7 +4,7 @@ $username = $_POST['login'];
 $password = $_POST['password'];
 // $valid = $dao->isValidUser($username, $password);
 $valid = false;
-if ($username == "conradkennington@gmail.com" && $password == "abc123") {
+if ($username == /*database*/ && $password == "database") {
   $valid = true;
 }
 $_SESSION = array();

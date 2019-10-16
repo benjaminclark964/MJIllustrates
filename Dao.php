@@ -1,4 +1,7 @@
 <?php
+include_once 'createAccount.html';
+include_once 'signIn.html';
+
 class Dao {
   private $host = 'us-cdbr-iron-east-05.cleardb.net';
   private $dbname = 'heroku_c0ae98134ba57d2';
@@ -13,5 +16,33 @@ class Dao {
     }
     return $connection;
   }
+  
+  /*finish this after inserting into database*/
+  public function getLogin(){
+	  $conn = this->getConnection();
+	  try{
+		 
+	  }catch(){
+		  
+	  }
+  }
+}
+
+/*stores create account information in the database*/
+public function putCreateAccount($user, $password, $re-enter-password, $firstname, $lastname, $email){
+	$conn = this->getConnection();
+	if($password != $re-enter-password){
+		echo "Error: Passwords do not match";
+		exit;
+	}
+	$saveQuery = "insert into username values(:user, :password, :firstname, :lastname, :email)";
+	$q = $conn->prepare($saveQuery);
+	//figure this out more later
+	$q->bindParam(":username", $user);
+	$q->bindParam(":password", $password);
+	$q->bindParam(":firstname", $firstname);
+	$q->bindParam(":lastname", $lastname);
+	$q->bindParam(":email", $email);
+	$q->execute();
 }
 ?>
