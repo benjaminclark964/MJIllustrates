@@ -35,7 +35,7 @@ public function putCreateAccount($user, $password, $re-enter-password, $firstnam
 		echo "Error: Passwords do not match";
 		exit;
 	}
-	$saveQuery = "insert into username values(:user, :password, :firstname, :lastname, :email)";
+	$saveQuery = "INSERT INTO user VALUES(:user, :password, :firstname, :lastname, :email)";
 	$q = $conn->prepare($saveQuery);
 	//figure this out more later
 	$q->bindParam(":username", $user);
@@ -44,5 +44,17 @@ public function putCreateAccount($user, $password, $re-enter-password, $firstnam
 	$q->bindParam(":lastname", $lastname);
 	$q->bindParam(":email", $email);
 	$q->execute();
+}
+
+/*validEmail*/
+public function validEmail($email){
+	$conn = this->getConnection();
+	$emailQuery = "SELECT email FROM user;"
+}
+
+/*valid username*/
+public function validUsername($username){
+	$conn = this->getConnection();
+	$usernameQuery = "SELECT username FROM user";
 }
 ?>

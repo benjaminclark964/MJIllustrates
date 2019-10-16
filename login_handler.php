@@ -1,20 +1,19 @@
 <?php
+include_once 'signIn.html';
+require_once 'Dao.php';
 session_start();
-$username = $_POST['login'];
-$password = $_POST['password'];
+$user = $_POST['Username'];
+$pass = $_POST['Password'];
 // $valid = $dao->isValidUser($username, $password);
 $valid = false;
-if ($username == /*database*/ && $password == "database") {
+if ($user == validUser($user) && $pass == validPassword($pass)) {
   $valid = true;
 }
-$_SESSION = array();
 if ($valid) {
-   $_SESSION['logged_in'] = true;
-   header("Location: http://cs401/granted.php");
+   header("Location: http://index.html");
    exit;
 } else {
-   $_SESSION['message'] = "Invalid username or password";
-   header("Location: http://cs401/login.php");
+   header("Location: http://signin.html);
    exit;
 }
 ?>
