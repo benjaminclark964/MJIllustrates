@@ -57,4 +57,3 @@ public function validUsername($username){
 	$conn = this->getConnection();
 	$usernameQuery = "SELECT username FROM user";
 }
-?>
