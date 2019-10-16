@@ -1,3 +1,4 @@
+<html
 <?php
 include_once 'signIn.html';
 require_once 'Dao.php';

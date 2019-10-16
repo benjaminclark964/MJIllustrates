@@ -13,7 +13,7 @@ $validUser = $dao->validUser($username);
 $validEmail = $dao->validEmail($email);
 
 /*checks for invalid username*/
-if ($username == validUser()){
+if ($username == validUser($username)){
 	echo "Error: username already exists";
 	exit;
 }
