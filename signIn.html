@@ -1,5 +1,6 @@
 <?php
   include_once 'Dao.php';
+  include_once 'login_handler.php';
   session_start();
 ?>
 <html>
@@ -18,10 +19,10 @@
 	
 	<body>
 	
-		<form method = "get">
+		<form method = "POST">
 			<div class="firstlastname">
-			<p>Username</p><li><input type="text" name="Username"></li>
-			<p>Password</p><li><input type="text" name="Password"></li>
+			<p>Username</p><li><input type="text" name="Username" placeholder="Enter Username"></li>
+			<p>Password</p><li><input type="password" name="Password" placeholder="Enter Password"></li>
 			<li><input type="submit" value="sign in"></li>
 			<li><a href = "createAccount.html">CREATE NEW ACCOUNT</a></li>
 			</div>

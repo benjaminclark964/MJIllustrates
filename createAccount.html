@@ -22,12 +22,12 @@ session_start();
 	<div>
 		<form method = "POST" action ="login_handler.php">
 			<div class = "firstlastname">
-			<p>First Name</p><li><input type="text" name="firstname" value=<?php $firstname; ?>></li>
-			<p>Last Name</p><li><input type="text" name="lastname" value=<?php $lastname; ?>></li>
-			<p>Email</p><li><input type="text" name="email" value=<?php $email; ?>></li>
-			<p>New Username</p><li><input type="text" name="username" value=<?php $username; ?>></li>
-			<p>Password</p><li><input type="text" name="password" value=<?php $password; ?>></li>
-			<p>Re-enter Password</p><li><input type="text" name="re-enter-password" value=<?php $re-enter-password;?>></li>
+			<p>First Name</p><li><input type="text" name="firstname" placeholder="firstname" value=<?php $firstname; ?>></li>
+			<p>Last Name</p><li><input type="text" name="lastname" placeholder="lastname" value=<?php $lastname; ?>></li>
+			<p>Email</p><li><input type="text" name="email" placeholder="email@email.com" value=<?php $email; ?>></li>
+			<p>New Username</p><li><input type="text" name="username" placeholder="new username" value=<?php $username; ?>></li>
+			<p>Password</p><li><input type="password" name="password"  value=<?php $password; ?>></li>
+			<p>Re-enter Password</p><li><input type="password" name="re-enter-password" value=<?php $re-enter-password;?>></li>
 			<li><input type="submit" value="save"></li>
 			</div>
 		</form>
