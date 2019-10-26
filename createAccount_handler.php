@@ -1,25 +1,17 @@
 <?php
-include_once 'createAccount.html';
-session_start();
-
-$username = $_POST['username];
-$password = $_POST['password'];
-$firstname = $_POST['firstname']
-$lastname = $_POST['lastname'];
-$email = $_POST['email'];
-$re-enter-password = $_POST['re-enter-password'];
-
-$validUser = $dao->validUser($username);
-$validEmail = $dao->validEmail($email);
-
-/*checks for invalid username*/
-if ($username == validUser($username)){
-	echo "Error: username already exists";
-	exit;
+if(isset($_POST['save-submit'])){
+	
+	require 'Dao.php';
+	
+	$firstname = $_POST['firstName'];
+	$lastname = $_POST['lastName'];
+	$email = $_POST['Email'];
+	$username=$_POST['userid'];
+	$password=$_POST['passWord'];
+	$re-enterpass=$_POST['re-enter-password'];
+	
+	if(empty($firstname) || empty($lastname) || empty($email) || empty($username) || empty($password) || empty($re-enterpass)){
+		header("Location: createAccount.html?error=emptyfields&firstName=".$firstname"&lastname=".$lastName"&Email=".$email"&userid=".$username"&passWord=".$password"&re-enter-password=".$re-enterpass")	
+	}
+	
 }
-/*checks for invalid email*/
-if ($email == validEmail($email)){
-	echo "Error: email is associated with an existing account";
-	exit;
-}
-?>

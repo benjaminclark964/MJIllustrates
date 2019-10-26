@@ -1,4 +1,5 @@
 <?php
+require 'Dao.php';
 session_start();
 ?>
 <html>
@@ -20,15 +21,15 @@ session_start();
 	
 	<body>
 	<div>
-		<form method = "POST" action ="login_handler.php">
+		<form method = "POST" action ="createAccount_handler.php">
 			<div class = "firstlastname">
-			<p>First Name</p><li><input type="text" name="firstname" placeholder="firstname" value=<?php $firstname; ?>></li>
-			<p>Last Name</p><li><input type="text" name="lastname" placeholder="lastname" value=<?php $lastname; ?>></li>
-			<p>Email</p><li><input type="text" name="email" placeholder="email@email.com" value=<?php $email; ?>></li>
-			<p>New Username</p><li><input type="text" name="username" placeholder="new username" value=<?php $username; ?>></li>
-			<p>Password</p><li><input type="password" name="password"  value=<?php $password; ?>></li>
-			<p>Re-enter Password</p><li><input type="password" name="re-enter-password" value=<?php $re-enter-password;?>></li>
-			<li><input type="submit" value="save"></li>
+			<p>First Name</p><li><input type="text" name="firstName" placeholder="firstname"></li>
+			<p>Last Name</p><li><input type="text" name="lastName" placeholder="lastname"></li>
+			<p>Email</p><li><input type="text" name="Email" placeholder="email@email.com"></li>
+			<p>New Username</p><li><input type="text" name="userid" placeholder="new username"></li>
+			<p>Password</p><li><input type="password" name="passWord" placeholder="password"></li>
+			<p>Re-enter Password</p><li><input type="password" name="re-enter-password" placeholder="re-enter password"></li>
+			<li><button type="submit" value="save-submit">Create Account</button></li>
 			</div>
 		</form>
 	</div>
