@@ -8,6 +8,9 @@ $pass = $_POST['Password'];
 $valid = false;
 if (isset($_POST['Username'])) {
   $valid = true;
+  if($valid == true){
+	  echo "I work"; 
+  }
   $sql = "SELECT * FROM user WHERE	username="'.$user.'" AND password = "'.$pass.'" limit 1";
   
   $result = mysql_query($sql);
@@ -20,12 +23,12 @@ if (isset($_POST['Username'])) {
 	  exit();	
   }
 }
-if ($valid) {
+/*if ($valid) {
    header("Location: http://index.html");
    exit;
 } else {
    header("Location: http://signin.html);
    exit;
-}
+}*/
 ?>
 
