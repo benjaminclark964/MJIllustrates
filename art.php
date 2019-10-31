@@ -7,12 +7,12 @@
 		<link rel="stylesheet" type="text/css" href="style.css">
 		<title>MJIllustrates Art</title>
 		<div class = "signinbutton">
-			<a href = "signIn.html">SIGN IN </a>
+			<a href = "signIn.php">SIGN IN </a>
 		</div>
 		<img src ="images/Untitled_Artwork.png" alt= "MJIllustrates Logo" class="logo">
 		<div class ="navbarArt">
-			<a href="about.html">ABOUT</a>		
-			<a href="index.html">HOME </a> 
+			<a href="about.php">ABOUT</a>		
+			<a href="index.php">HOME </a> 
 			<a href="https://www.etsy.com/shop/MJIllustratesShop">STORE </a>
 		</div>
 	</head>

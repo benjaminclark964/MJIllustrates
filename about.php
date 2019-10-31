@@ -1,6 +1,7 @@
 <?php
-
+  
   session_start();
+  echo "I work";
  ?>
 <html>
 
@@ -9,12 +10,12 @@
 		<link rel="stylesheet" type="text/css" href="style.css">
 		<title>MJIllustrates About</title>
 		<div class = "signinbutton">
-			<a href = "file:///C:/ProgramFiles/wamp64/www/signIn.html">SIGN IN </a>
+			<a href = "signIn.php">SIGN IN </a>
 		</div>
 		<img src ="images/Untitled_Artwork.png" alt= "MJIllustrates Logo" class = "logo">
 		<div class = "navbarAbout">
-			<a href="index.html">HOME </a>
-			<a href="art.html">ART </a>
+			<a href="index.php">HOME </a>
+			<a href="art.php">ART </a>
 			<a href="https://www.etsy.com/shop/MJIllustratesShop">STORE </a>
 		</div>
 	</head>

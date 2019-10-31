@@ -1,5 +1,4 @@
 <?php
-phpinfo();
    session_start();
   ?>
  
@@ -9,18 +8,37 @@ phpinfo();
 		<link rel="shortcut icon" href="images/favicon1.ico" type="images/ico">
 		<link rel="stylesheet" type="text/css" href="style.css">
 		<title>MJIllustrates Home</title>
+		<?php
+		  //checks if user is logged in or not
+		  if(isset($_SESSION['user'])){
+		    echo '<p>You are logged in</p>';
+		  }
+		  else{
+		   echo '<p>You are logged out</p>';
+		  }
+		?>
+		
 		
 	</head>
 	
 	<body>
 	
 	    <div class = "signinbutton">
-			<a href = "signIn.html">SIGN IN </a>
+		    <?php
+			  if(isset($_SESSION['user'])){
+			   echo '<form method = "POST" action="logout_handler.php">
+			    <li><button type="submit" value="logout">Logout</button></li>
+		        </form>';
+			  } else {
+			    echo '<a href = "signIn.php">SIGN IN </a>';
+			  }
+			?>	
 		</div>
+		
 		<img src ="images/Untitled_Artwork.png" alt= "MJIllustrates Logo" class = "logo">
 		<div class ="navbarHome">
-			<a href="about.html">ABOUT</a>
-			<a href="art.html">ART</a>
+			<a href="about.php">ABOUT</a>
+			<a href="art.php">ART</a>
 			<a href="https://www.etsy.com/shop/MJIllustratesShop">STORE </a>
 		</div>
 		
@@ -40,9 +58,6 @@ phpinfo();
 		closely trust. We will always offer support through fan community, because anything helps, and we fully understand the sensitivity of each subject.
 		The series for happy years will be out december of 2019! stay tuned and follow me on instgarm for updates! @m.j.illuatrates, or just click the button below!
 		</p></div></div>
-		
-		<p>You are logged in</p>
-		<p>You are logged out</p>
 		
 	</body>
 		

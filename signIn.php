@@ -1,6 +1,4 @@
 <?php
-  //require 'Dao.php';
-  //require 'logout_handler.php';
   session_start();
 ?>
 <html>
@@ -10,25 +8,25 @@
 		<title>MJIllustrates Sign in</title>
 		<img src ="images/Untitled_Artwork.png" alt= "MJIllustrates Logo" class = "logo">
 		<div class="signinnavbar">
-			<a href="index.html">HOME </a>
-			<a href="about.html">ABOUT</a>	
-			<a href="art.html">ART </a>	
+			<a href="index.php">HOME </a>
+			<a href="about.php">ABOUT</a>	
+			<a href="art.php">ART </a>	
 			<a href="https://www.etsy.com/shop/MJIllustratesShop">STORE </a>
 		</div>
 	</head>
 	
 	<body>
 	
-		<form action="login_handler.php"method = "POST">
+		<form method = "POST" action="login_handler.php">
 			<div class="firstlastname">
 			<p>Username</p><li><input type="text" name="username" placeholder="Enter Username"></li>
 			<p>Password</p><li><input type="password" name="password" placeholder="Enter Password"></li>
 			<li><button type="submit" value="sign-in">Sign in</button></li>
-			<li><a href = "createAccount.html">CREATE NEW ACCOUNT</a></li>
+			<li><a href = "createAccount.php">CREATE NEW ACCOUNT</a></li>
 			</div>
 		</form>
 		
-		<form action="logout_handler.php"method = "POST">
+		<form method = "POST" action="logout_handler.php">
 			<div class="firstlastname">
 			<li><button type="submit" value="logout">Logout</button></li>
 			</div>

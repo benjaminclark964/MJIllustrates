@@ -1,5 +1,4 @@
 <?php
-//require 'Dao.php';
 session_start();
 ?>
 <html>
@@ -8,19 +7,36 @@ session_start();
 		<link rel="stylesheet" type="text/css" href="style.css">
 		<title>MJIllustrates Create Account</title>
 		<div class = "signinbutton">
-			<a href = "signIn.html">SIGN IN </a>
+			<a href = "signIn.php">SIGN IN </a>
 		</div>
 		<img src ="images/Untitled_Artwork.png" alt= "MJIllustrates Logo" class="logo">
 		<div class="signinnavbar">
-			<a href="index.html">HOME </a>
-			<a href="about.html">ABOUT</a>	
-			<a href="art.html">ART </a> 	
+			<a href="index.php">HOME </a>
+			<a href="about.php">ABOUT</a>	
+			<a href="art.php">ART </a> 	
 			<a href="https://www.etsy.com/shop/MJIllustratesShop">STORE </a>
 		</div>
 	</head>
 	
 	<body>
 	<div>
+	    <?php
+		  if(isset($_GET['error'])){
+		    if($_GET['error'] == "emptyfields"){
+				echo "Fill in all fields!";
+			} else if($_GET['error'] == "invalidfirstname"){
+				echo "Invalid first name";
+			} else if($_GET['error'] == "invalidlastname"){
+				echo "Invalid last name";
+			} else if($_GET['error'] == "invalidemail"){
+				echo "Invalid email";
+			} else if($_GET['error'] == "invalidusername"){
+				echo "Invalid username";
+			} else if($_GET['error'] == "invalidpassword"){
+				echo "Invalid password";
+			}
+		  }
+		?>
 		<form method = "POST" action ="createAccount_handler.php">
 			<div class = "firstlastname">
 			<p>First Name</p><li><input type="text" name="firstName" placeholder="firstname"></li>
