@@ -1,6 +1,6 @@
 head{
-	margin: 0;
-	padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 /* Body styling for every page*/
@@ -19,6 +19,16 @@ body{
   width: 50%;
 }
 
+/*message to user when signed in*/
+.signedInMessage{
+  text-align: center;
+}
+
+/*error message styler*/
+.errormessage{
+  text-align: center;
+  color: Red;
+}
 
 /* Navigation bar styling for Index page and Art Page*/
 .navbarHome{ 

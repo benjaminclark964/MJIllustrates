@@ -1,6 +1,5 @@
 <?php
-//if(isset($_POST['save-submit'])){
-	
+	session_start();
 	require 'Dao.php';
 	
 	$firstname = $_POST['firstName'];
@@ -9,49 +8,65 @@
 	$username=$_POST['userid'];
 	$password=$_POST['passWord'];
 	$reEnterpass=$_POST['re-enter-password'];
+	$fail = false;	//to verify that no failures occured
+	$_SESSION = array();
 	
+	//changes to if statements vs if else
 	//checks to make sure forms have information
 	if(empty($firstname) || empty($lastname) || empty($email) || empty($username) || empty($password) || empty($reEnterpass)){
 		header("Location: createAccount.php?error=emptyfields&firstName=".$firstname."&lastName=".$lastname."&Email=".$email."&userid=".$username);
-        exit();	
+		$fail = true;
+		$_SESSION['empty'] = "empty fields";	
     } 
 	
 	//validate first name
-	else if(!preg_match("/^[a-z]*$/", $firstname)){
+    if(preg_match("/^[0-9]*$/", $firstname)){
 		header("Location: createAccount.php?error=invalidfirstname&lastName=".$lastname."&Email=".$email."&userid=".$username);
-		exit();
+		$fail = true;
+		$_SESSION['firstname'] = "invalid first name: must only contain letters";
 	}
 	
 	//validate last name
-	else if(!preg_match("/^[a-z]*$/", $lastname)){
+	if(preg_match("/^[0-9]*$/", $lastname)){
 		header("Location: createAccount.php?error=invalidlastname&firstName=".$firstname."&Email=".$email."&userid=".$username);
-		exit();
+		$fail = true;
+		$_SESSION['lastname'] = "invalid last name: must only contain letters";
 	}	
 	
 	//validate email
-	else if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
+	if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
 		header("Location: createAccount.php?error=invalidemail&firstname=".$firstname."&lastName=".$lastname."&userid=".$username);
+		$fail = true;
+		$_SESSION['email'] = "invalid email";
 	}
 	
 	//validate username
-	else if(!preg_match("/^[a-z]*$/", $username)){
+	if(!preg_match("/^[a-z]*$/", $username)){
 		header("Location: createAccount.php?error=invalidusername&firstName=".$firstname."&lastName=".$lastname."&Email=".$email);
-		exit();
+		$fail = true;
+		$_SESSION['username'] = "invalid username: must at least one lowercase letter";
 	}	
 	
 	//validate password
-	else if(!preg_match("/^[a-zA-Z0-9]*$/", $password)){
+	if(!preg_match('/^(?=.*\d)(?=.*[A-Za-z])[0-9A-Za-z!@#$%&]{8,100}$/', $password)){
 		header("Location: createAccount.php?error=invalidpassword&firstname=".$firstname."&lastName=".$lastname."&Email=".$email."&userid=".$username);
-        exit();
+		$fail = true;
+		$_SESSION['password'] = "invalid password: must contain 1 lower case, one upper case, one digit, one special character, and have a length of 8";
 	}	
 	
 	//if two passwords are not equal
-	else if($password !== $reEnterpass){
+	if($password !== $reEnterpass){
 		header("Location: createAccount.php?error=passwordcheck&firstName=".$firstname."&lastName=".$lastname."&Email=".$email."&userid=".$username);
+		$fail = true;
+		$_SESSION['passmatch'] = "passwords do not match";
+	} 
+	
+	//if any failures occured
+   if($fail == true){
 		exit();
-		
-	//if user enters a user name already in the database
-	} else {
+	}	
+	
+	else {
 		
 		$sql="SELECT * FROM user WHERE username=?";
 		$stmt=mysqli_stmt_init($conn);
@@ -94,8 +109,5 @@
 		
 		//closing database connections
 		mysqli_stmt_close($stmt);
-		mysqli_close($conn);
-		
-	}
-	
-//}
+		mysqli_close($conn);	
+	}	
