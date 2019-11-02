@@ -51,7 +51,7 @@
 	if(!preg_match('/^(?=.*\d)(?=.*[A-Za-z])[0-9A-Za-z!@#$%&]{8,100}$/', $password)){
 		header("Location: createAccount.php?error=invalidpassword&firstname=".$firstname."&lastName=".$lastname."&Email=".$email."&userid=".$username);
 		$fail = true;
-		$_SESSION['password'] = "invalid password: must contain 1 lower case, one upper case, one digit, one special character, and have a length of 8";
+		$_SESSION['password'] = "invalid password: must contain 1 lower case, one upper case, one digit, one special character, and have a length of at least 8";
 	}	
 	
 	//if two passwords are not equal
@@ -66,6 +66,7 @@
 		exit();
 	}	
 	
+	//no failures occur from user entered data
 	else {
 		
 		$sql="SELECT * FROM user WHERE username=?";

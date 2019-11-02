@@ -1,5 +1,4 @@
 <?php
-
 	//database credentials
    $host = 'us-cdbr-iron-east-05.cleardb.net';
    $dbname = 'heroku_c0ae98134ba57d2';
