@@ -62,7 +62,7 @@
 					echo $_SESSION['passmatch'];
 					echo "<br>";
 				}
-				session_unset();	  
+				//session_unset();	  
 			?>
 		</div>
 		
