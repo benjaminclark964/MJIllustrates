@@ -14,7 +14,7 @@
 	//changes to if statements vs if else
 	//checks to make sure forms have information
 	if(empty($firstname) || empty($lastname) || empty($email) || empty($username) || empty($password) || empty($reEnterpass)){
-		header("Location: createAccount.php?error=emptyfields&firstName=".$firstname."&lastName=".$lastname."&Email=".$email."&userid=".$username);
+		header("Location: createAccount.php?error=emptyfields&firstname=".$firstname."&lastName=".$lastname."&Email=".$email."&userid=".$username);
 		$fail = true;
 		$_SESSION['empty'] = "empty fields";	
     } 
@@ -28,24 +28,24 @@
 	
 	//validate last name
 	if(preg_match("/^[0-9]*$/", $lastname)){
-		header("Location: createAccount.php?error=invalidlastname&firstName=".$firstname."&Email=".$email."&userid=".$username);
+		header("Location: createAccount.php?error=invalidlastname&firstname=".$firstname."&Email=".$email."&userid=".$username);
 		$fail = true;
 		$_SESSION['lastname'] = "invalid last name: must only contain letters";
 	}	
 	
-	//validate email
-	if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
-		header("Location: createAccount.php?error=invalidemail&firstname=".$firstname."&lastName=".$lastname."&userid=".$username);
-		$fail = true;
-		$_SESSION['email'] = "invalid email";
-	}
+	 //validate email
+	 if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
+		 header("Location: createAccount.php?error=invalidemail&firstname=".$firstname."&lastName=".$lastname."&userid=".$username);
+		 $fail = true;
+		 $_SESSION['email'] = "invalid email";
+	 }
 	
-	//validate username
-	if(!preg_match("/^[a-z]*$/", $username)){
-		header("Location: createAccount.php?error=invalidusername&firstName=".$firstname."&lastName=".$lastname."&Email=".$email);
-		$fail = true;
-		$_SESSION['username'] = "invalid username: must at least one lowercase letter";
-	}	
+	 //validate username
+	 if(preg_match("/[!@#$%&^*()-_+=|;<>?]$/", $username)){
+		 header("Location: createAccount.php?error=invalidusername&firstname=".$firstname."&lastName=".$lastname."&Email=".$email);
+		 $fail = true;
+		 $_SESSION['username'] = "invalid: username cannot contain special characters";
+	 }
 	
 	//validate password
 	if(!preg_match('/^(?=.*\d)(?=.*[A-Za-z])[0-9A-Za-z!@#$%&]{8,100}$/', $password)){
@@ -56,7 +56,7 @@
 	
 	//if two passwords are not equal
 	if($password !== $reEnterpass){
-		header("Location: createAccount.php?error=passwordcheck&firstName=".$firstname."&lastName=".$lastname."&Email=".$email."&userid=".$username);
+		header("Location: createAccount.php?error=passwordcheck&firstname=".$firstname."&lastName=".$lastname."&Email=".$email."&userid=".$username);
 		$fail = true;
 		$_SESSION['passmatch'] = "passwords do not match";
 	} 
@@ -73,7 +73,7 @@
 		$stmt=mysqli_stmt_init($conn);
 		
 		if(!mysqli_stmt_prepare($stmt, $sql)){
-		  header("Location: createAccount.php?error=sqlerror&firstName=".$firstname."&lastName=".$lastname."&Email=".$email);
+		  header("Location: createAccount.php?error=sqlerror&firstname=".$firstname."&lastName=".$lastname."&Email=".$email);
 		  exit();
 		} 
 		else {
@@ -83,7 +83,7 @@
 		  $resultCheck=mysqli_stmt_num_rows($stmt);
 		  
 		  if(resultCheck > 0){
-		    header("Location: createAccount.php?error=usernamealreadyexists&firstName=".$firstname."&lastName=".$lastname."&Email=".$email);
+		    header("Location: createAccount.php?error=usernamealreadyexists&firstname=".$firstname."&lastName=".$lastname."&Email=".$email);
 		    exit();
 		  } 
 		  
@@ -94,7 +94,7 @@
 			
 			//if statement failes
 			if(!mysqli_stmt_prepare($stmt, $sql)){
-		      header("Location: createAccount.php?error=sqlerror&firstName=".$firstname."&lastName=".$lastname."&Email=".$email);
+		      header("Location: createAccount.php?error=sqlerror&firstname=".$firstname."&lastName=".$lastname."&Email=".$email);
 		      exit();
 		    } 
 			
@@ -102,7 +102,7 @@
 			else {
 			  mysqli_stmt_bind_param($stmt, "sssss", $username, $password, $firstname, $lastname, $email);
 		      mysqli_stmt_execute($stmt);
-			  header("Location: index.php?success=successfullyloggedin&firstName=".$firstname."&lastName=".$lastname."&Email=".$email);
+			  header("Location: signIn.php?success=successfullyloggedin&firstname=".$firstname."&lastName=".$lastname."&Email=".$email);
 		      exit();
 			}
 		  }

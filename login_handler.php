@@ -10,6 +10,7 @@ session_start();
   //checks if either field empty
   if(empty($user) || empty($pass)){
 	  header("Location: signIn.php?error=emptyfields");
+	  $_SESSION['error'] = "empty fields";
 	  exit();
   }
 
@@ -40,7 +41,7 @@ session_start();
 		}
 		
 		//valid username and password
-		else if($pass == $row['password'] && $user == $row['username']){
+		else if($pass == $row['password'] && $user == $row['username'] || $user == $row['email']){
 		  	$_SESSION['userId'] = $row['userID'];
 			$_SESSION['user'] = $row['username'];
 			header("Location: index.php?success=signedin");
@@ -48,6 +49,7 @@ session_start();
 		}
 	   else{
 		header("Location: signIn.php?error=nouser");
+		$_SESSION['error'] = "No such user";
 	    exit();
 	  }
      }

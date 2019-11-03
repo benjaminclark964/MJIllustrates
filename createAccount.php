@@ -32,7 +32,8 @@
 	
 	<body>
 		<div>
-			<div class = "errormessage">
+		
+		<div class = "errormessage">
 			<?php	  
 				if(isset($_SESSION['empty'])){
 					echo $_SESSION['empty'];
@@ -62,10 +63,10 @@
 					echo $_SESSION['passmatch'];
 					echo "<br>";
 				}
-				//session_unset();	  
+				session_unset();	  
 			?>
-		</div>
-		
+			</div>
+
 		<form method = "POST" action ="createAccount_handler.php">
 			<div class = "firstlastname">
 			<p>First Name</p><li><input type="text" name="firstName" placeholder="firstname" value ="<?php if(isset($_GET['firstname'])) echo $_GET['firstname']; ?>"></li>
@@ -76,6 +77,9 @@
 			<p>Re-enter Password</p><li><input type="password" name="re-enter-password" placeholder="re-enter password"></li>
 			<li><button type="submit" value="save-submit">Create Account</button></li>
 			</div>
+			
+
+		
 		</form>
 	</div>
 </body>

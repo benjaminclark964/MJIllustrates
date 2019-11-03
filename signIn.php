@@ -37,8 +37,8 @@
 		</div>
 		<form method = "POST" action="login_handler.php">
 			<div class="firstlastname">
-			<p>Username</p><li><input type="text" name="username" placeholder="Enter Username"></li>
-			<p>Password</p><li><input type="password" name="password" placeholder="Enter Password"></li>
+			<p>Username</p><li><input type="text" name="username" placeholder="username or email"></li>
+			<p>Password</p><li><input type="password" name="password" placeholder="password"></li>
 			<li><button type="submit" value="sign-in">Sign in</button></li>
 			<li><a href = "createAccount.php">CREATE NEW ACCOUNT</a></li>
 			</div>
