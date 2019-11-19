@@ -19,6 +19,8 @@
 	</head>
 	
 	<body>
+	
+	
 	    <div class = "signinbutton">
 		<?php
 			if(isset($_SESSION['user'])){
@@ -32,18 +34,20 @@
 		</div>
 		
 		<img src ="images/Untitled_Artwork.png" alt= "MJIllustrates Logo" class = "logo">
-		
 		<div class ="navbarHome">
 			<a href="about.php">ABOUT</a>
 			<a href="art.php">ART</a>
 			<a href="https://www.etsy.com/shop/MJIllustratesShop">STORE </a>
 		</div>
 		
-		<div class = "box1"><div class = "paragraphs"><p> "happy years;" Is a true love story of oneself and friendship between three girls, Belladonna "Donna", Cornelius "Corie", And Izadora "Izzy". 
+		<div class = "box1"><div class = "paragraphs"><p id ="p"> "happy years;" Is a true love story of oneself and friendship between three girls, Belladonna "Donna", Cornelius "Corie", And Izadora "Izzy". 
 		Belladonna Absinthe enters in as the new, very young, CEO and the fashion industry doesnt know what to think. These three women who are 
 		just trying to survive the competitive career at a editorial company for the infamous "St. Laurent Magazine". Not only that, there is 
 		danger and speculation of missing women within Khan City and the modeling industry. Personal health, growth, and the outside world clammering 
 		down on the three women, all they really want is some mamosas and some mani-pedis!</p></div></div>
+		<!--<script>
+	document.getElementById("p").innerHTML = "I work";
+	</script>-->
 		
 		<div class = "paragraphs"><img src = "images/homePicture.jpg" alt = "Story cover"></div>
 		

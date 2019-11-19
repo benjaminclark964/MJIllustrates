@@ -45,7 +45,7 @@
 		years, from traditonal to digital!</p></div></div>
 		
 		<div class="artImage">
-			<li><img src="images/Coffee.jpg" alt="Coffee"></li>
+			<li><img id="pic" src="images/Coffee.jpg" alt="Coffee"></li>
 			<li><img src ="images/RedShirt.jpg" alt = "Red Shirt"></li>
 			<li><img src="images/Sick.jpg" alt="Sick"></li>
 			<li><img src="images/BillieEilish.jpg" alt="BillieEilish"></li>
@@ -55,6 +55,13 @@
 			<li><img src ="images/Reading.jpg" alt = "Reading"></li>
 			<li><img src="images/Rihana.jpg" alt="Rihana"></li>
 		</div>
+		<script>
+		$(function (){
+    $('pic').on('click', function ()
+    {
+        $(this).width(1000);
+    });
+});</script>
 	</body>
 	
 	<footer>
