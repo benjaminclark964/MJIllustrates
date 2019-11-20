@@ -46,7 +46,7 @@
 		vibrance that the world has had to offer to me. I hope you enjoy my art, and you can find solstice and the same gentleness that I create with each stroke 
 		of my pens or brushes.</p></div></div>
 		
-		<div class = aboutpic><img src="images/GirlEatingBread.jpg" alt="Girl Eating Bread"></div>
+		<div class = "aboutpic"><img src="images/GirlEatingBread.jpg" alt="Girl Eating Bread"></div>
 	<body/>
 		
 	<footer>
