@@ -93,21 +93,31 @@ body{
   color: blue;
 }
 
-.artImage{
-  list-style: none;
-  
+.artImageRow1 img{
+  float:center;
+  opacity: 0.8;
+  cursor: pointer;
+  padding-left: 100px;
+  padding-bottom:50px;
+  margin-left:auto;
+  margin-right:auto;
 }
 
-.artImage li{
-  margin: 10;
+.artImageRow1 img:hover{
+	opacity: 60;
 }
 
-.artImage img{
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 75px;
-  width: 50%;	
+.artImageRow2 img{
+  float:center;
+  opacity: 0.8;
+  cursor: pointer;
+  padding-left: 100px;
+  margin-left:auto;
+  margin-right:auto
+}
+
+.artImageRow2 img:hover{
+	opacity: 60;
 }
 
 /* Navigation bar styling for sign in page*/
@@ -200,3 +210,61 @@ body{
 .foot li{
 	margin: 0 20;
 }
+
+
+
+
+
+
+
+/* The grid: Four equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 25%;
+  padding: 10px;
+}
+
+/* Style the images inside the grid */
+.column img {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.column img:hover {
+  opacity: 1;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* The expanding image container (positioning is needed to position the close button and the text) */
+.container {
+  position: relative;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  display: none;
+}
+
+/* Expanding image text */
+#imgtext {
+  position: relative;;
+  bottom: 25px;
+  left: 15px;
+  color: white;
+  font-size: 20px;
+}
+
+/* Closable button inside the image */
+.closebtn {
+  position: absolute;
+  top: 40px;
+  right: 15px;
+  color: black;
+  font-size: 35px;
+  cursor: pointer;
+}
+

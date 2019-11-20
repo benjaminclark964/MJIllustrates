@@ -5,6 +5,7 @@
 	<head>
 		<link rel="shortcut icon" href="images/favicon1.ico" type="images/ico">
 		<link rel="stylesheet" type="text/css" href="style.css">
+		<script src="jquery-3.4.1.js"></script>
 		<title>MJIllustrates Art</title>
 		
 		<div class = "signedInMessage">
@@ -44,24 +45,61 @@
 		that I have a billion sketch books as well. None of them are finished to the last page.(haha) Please enjoy my selection of art I collaborated over the 
 		years, from traditonal to digital!</p></div></div>
 		
-		<div class="artImage">
-			<li><img id="pic" src="images/Coffee.jpg" alt="Coffee"></li>
-			<li><img src ="images/RedShirt.jpg" alt = "Red Shirt"></li>
-			<li><img src="images/Sick.jpg" alt="Sick"></li>
-			<li><img src="images/BillieEilish.jpg" alt="BillieEilish"></li>
-			<li><img src ="images/ConanWoman.jpg" alt = "Conan Woman"></li>
-			<li><img src="images/Hawaii.jpg" alt="Hawaii"></li>
-			<li><img src="images/PrincePrincess.jpg" alt="PrincePrincess"></li>
-			<li><img src ="images/Reading.jpg" alt = "Reading"></li>
-			<li><img src="images/Rihana.jpg" alt="Rihana"></li>
+		
+<script>
+  function expand(imgs) {
+    // Get the expanded image
+    var expandImg = document.getElementById("expandedImg");
+    // Get the image text
+    var imgText = document.getElementById("imgtext");
+    // Use the same src in the expanded image as the image being clicked on from the grid
+    expandImg.src = imgs.src;
+    // Use the value of the alt attribute of the clickable image as text inside the expanded image
+    imgText.innerHTML = imgs.alt;
+    // Show the container element (hidden with CSS)
+    expandImg.parentElement.style.display = "block";
+  }
+</script>
+
+
+		<div class="artImageRow1">
+			<img src="images/rsz_coffee" alt="Coffee" onclick="expand(coffee)">
+			<img id = "coffee" src="images/Coffee" alt="Coffee" style="display:none;">
+			
+			<img src ="images/rsz_redshirt" alt = "Red Shirt" onclick="expand(redshirt)">
+			<img id = "redshirt" src="images/RedShirt" alt="RedShirt" style="display:none;">
+			
+			<img src="images/rsz_1sick" alt="Sick" onclick="expand(sick)">
+			<img id = "sick" src="images/Sick" alt="Sick" style="display:none;">
+			
+			<img src ="images/rsz_conanwoman" alt = "Conan Woman" onclick="expand(conanwoman)">
+			<img id = "conanwoman" src="images/ConanWoman" alt="ConanWoman" style="display:none;">
 		</div>
-		<script>
-		$(function (){
-    $('pic').on('click', function ()
-    {
-        $(this).width(1000);
-    });
-});</script>
+		
+		<div class="artImageRow2">
+			<img src="images/rsz_1hawaii" alt="Hawaii" onclick="expand(hawaii)">
+			<img id = "hawaii" src="images/Hawaii" alt="Coffee" style="display:none;">
+			
+			<img src="images/rsz_11princeprincess" alt="PrincePrincess" onclick="expand(princeprincess)">
+			<img id = "princeprincess" src="images/PrincePrincess" alt="Coffee" style="display:none;">
+			
+			<img src ="images/rsz_reading" alt = "Reading" onclick="expand(reading)">
+			<img id = "reading" src="images/Reading" alt="Coffee" style="display:none;">
+			
+			<img src="images/rsz_rihana" alt="Rihana" onclick="expand(rihana)">
+			<img id = "rihana" src="images/Rihana" alt="Coffee" style="display:none;">	
+		</div>
+		
+		<div class="container">
+  <!-- Close the image -->
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+
+  <!-- Expanded image -->
+  <img id="expandedImg" style="width:100%;">
+
+  <!-- Image text -->
+  <div id="imgtext"></div>
+</div>
 	</body>
 	
 	<footer>
