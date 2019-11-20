@@ -64,30 +64,30 @@
 
 		<div class="artImageRow1">
 			<img src="images/rsz_coffee.jpg" alt="Coffee" onclick="expand(coffee)">
-			<img id = "coffee" src="images/Coffee" alt="Coffee" style="display:none;">
+			<img id = "coffee" src="images/Coffee.jpg" alt="Coffee" style="display:none;">
 			
-			<img src ="images/rsz_redshirt" alt = "Red Shirt" onclick="expand(redshirt)">
-			<img id = "redshirt" src="images/RedShirt" alt="RedShirt" style="display:none;">
+			<img src ="images/rsz_redshirt.jpg" alt = "Red Shirt" onclick="expand(redshirt)">
+			<img id = "redshirt" src="images/RedShirt.jpg" alt="RedShirt" style="display:none;">
 			
-			<img src="images/rsz_1sick" alt="Sick" onclick="expand(sick)">
-			<img id = "sick" src="images/Sick" alt="Sick" style="display:none;">
+			<img src="images/rsz_1sick.jpg" alt="Sick" onclick="expand(sick)">
+			<img id = "sick" src="images/Sick.jpg" alt="Sick" style="display:none;">
 			
-			<img src ="images/rsz_conanwoman" alt = "Conan Woman" onclick="expand(conanwoman)">
-			<img id = "conanwoman" src="images/ConanWoman" alt="ConanWoman" style="display:none;">
+			<img src ="images/rsz_conanwoman.jpg" alt = "Conan Woman" onclick="expand(conanwoman)">
+			<img id = "conanwoman" src="images/ConanWoman.jpg" alt="ConanWoman" style="display:none;">
 		</div>
 		
 		<div class="artImageRow2">
-			<img src="images/rsz_1hawaii" alt="Hawaii" onclick="expand(hawaii)">
-			<img id = "hawaii" src="images/Hawaii" alt="Coffee" style="display:none;">
+			<img src="images/rsz_1hawaii.jpg" alt="Hawaii" onclick="expand(hawaii)">
+			<img id = "hawaii" src="images/Hawaii.jpg" alt="Coffee" style="display:none;">
 			
-			<img src="images/rsz_11princeprincess" alt="PrincePrincess" onclick="expand(princeprincess)">
-			<img id = "princeprincess" src="images/PrincePrincess" alt="Coffee" style="display:none;">
+			<img src="images/rsz_11princeprincess.jpg" alt="PrincePrincess" onclick="expand(princeprincess)">
+			<img id = "princeprincess" src="images/PrincePrincess.jpg" alt="Coffee" style="display:none;">
 			
-			<img src ="images/rsz_reading" alt = "Reading" onclick="expand(reading)">
-			<img id = "reading" src="images/Reading" alt="Coffee" style="display:none;">
+			<img src ="images/rsz_reading.jpg" alt = "Reading" onclick="expand(reading)">
+			<img id = "reading" src="images/Reading.jpg" alt="Coffee" style="display:none;">
 			
-			<img src="images/rsz_rihana" alt="Rihana" onclick="expand(rihana)">
-			<img id = "rihana" src="images/Rihana" alt="Coffee" style="display:none;">	
+			<img src="images/rsz_rihana.jpg" alt="Rihana" onclick="expand(rihana)">
+			<img id = "rihana" src="images/Rihana.jpg" alt="Coffee" style="display:none;">	
 		</div>
 		
 		<div class="container">
