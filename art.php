@@ -63,7 +63,7 @@
 
 
 		<div class="artImageRow1">
-			<img src="images/rsz_coffee" alt="Coffee" onclick="expand(coffee)">
+			<img src="images/rsz_coffee.jpg" alt="Coffee" onclick="expand(coffee)">
 			<img id = "coffee" src="images/Coffee" alt="Coffee" style="display:none;">
 			
 			<img src ="images/rsz_redshirt" alt = "Red Shirt" onclick="expand(redshirt)">
