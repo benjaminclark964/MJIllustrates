@@ -1,3 +1,4 @@
+<!DOCTYPE html>  
 <?php
 	session_start();
 ?>
@@ -5,7 +6,8 @@
 	<head>
 		<link rel="shortcut icon" href="images/favicon1.ico" type="images/ico">
 		<link rel="stylesheet" type="text/css" href="style.css">
-		<script src="jquery-3.4.1.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		
 		<title>MJIllustrates Art</title>
 		
 		<div class = "signedInMessage">
@@ -43,24 +45,36 @@
 		buying more high qualtiy items for art work helps just a little bit, but for the most part it relies on the quality of your technique and skill set in art. 
 		I started off with Traditional Art, which included painting with acrylic, gouche, and other mediums. As a fellow artist, or just a friend, you may know 
 		that I have a billion sketch books as well. None of them are finished to the last page.(haha) Please enjoy my selection of art I collaborated over the 
-		years, from traditonal to digital!</p></div></div>
-		
-		
+		years, from traditonal to digital!</p></div></div>	
+	
+
 <script>
   function expand(imgs) {
     // Get the expanded image
     var expandImg = document.getElementById("expandedImg");
     // Get the image text
-    var imgText = document.getElementById("imgtext");
+    //var imgText = document.getElementById("imgtext");
     // Use the same src in the expanded image as the image being clicked on from the grid
     expandImg.src = imgs.src;
     // Use the value of the alt attribute of the clickable image as text inside the expanded image
-    imgText.innerHTML = imgs.alt;
+    //imgText.innerHTML = imgs.alt;
     // Show the container element (hidden with CSS)
     expandImg.parentElement.style.display = "block";
   }
 </script>
+ 
 
+
+<script>
+$(document).ready(function(){
+  $("#x").click(function(){
+    $("#expandedImg, #x").fadeOut("fast");
+  });
+  $("img").click(function(){
+    $("#expandedImg, #x").fadeIn("fast");
+  });
+});
+</script>
 
 		<div class="artImageRow1">
 			<img src="images/rsz_coffee.jpg" alt="Coffee" onclick="expand(coffee)">
@@ -78,22 +92,21 @@
 		
 		<div class="artImageRow2">
 			<img src="images/rsz_1hawaii.jpg" alt="Hawaii" onclick="expand(hawaii)">
-			<img id = "hawaii" src="images/Hawaii.jpg" alt="Coffee" style="display:none;">
+			<img id = "hawaii" src="images/Hawaii.jpg" alt="Hawaii" style="display:none;">
 			
 			<img src="images/rsz_11princeprincess.jpg" alt="PrincePrincess" onclick="expand(princeprincess)">
-			<img id = "princeprincess" src="images/PrincePrincess.jpg" alt="Coffee" style="display:none;">
+			<img id = "princeprincess" src="images/PrincePrincess.jpg" alt="Prince&Princess" style="display:none;">
 			
 			<img src ="images/rsz_reading.jpg" alt = "Reading" onclick="expand(reading)">
-			<img id = "reading" src="images/Reading.jpg" alt="Coffee" style="display:none;">
+			<img id = "reading" src="images/Reading.jpg" alt="Reading" style="display:none;">
 			
 			<img src="images/rsz_rihana.jpg" alt="Rihana" onclick="expand(rihana)">
-			<img id = "rihana" src="images/Rihana.jpg" alt="Coffee" style="display:none;">	
+			<img id = "rihana" src="images/Rihana.jpg" alt="Rihanah" style="display:none;">	
 		</div>
 		
-		<div class="container">
+		<div id = "div1" class="container">
   <!-- Close the image -->
-  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
-
+<span id = "x" class="closebtn">&times;</span>
   <!-- Expanded image -->
   <img id="expandedImg" style="width:100%;">
 
@@ -108,4 +121,5 @@
 			<li>Email: simplymj.art@gmail.com</li>	
 		</div>		
 	</footer>
-</html>
+	
+ 
