@@ -47,7 +47,7 @@
 		that I have a billion sketch books as well. None of them are finished to the last page.(haha) Please enjoy my selection of art I collaborated over the 
 		years, from traditonal to digital!</p></div></div>	
 	
-
+<!-- expands selected image -->
 <script>
   function expand(imgs) {
     // Get the expanded image
@@ -64,7 +64,7 @@
 </script>
  
 
-
+<!-- to fade expanded images in and out -->
 <script>
 $(document).ready(function(){
   $("#x").click(function(){
